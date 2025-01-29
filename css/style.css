@@ -40,6 +40,45 @@ body{
 }
 
 
+
+/* ! modal  */
+.opacity-container{
+/*todo prendo tutto lo schermo  */
+    width: 100vw;
+    height: 100vh;
+    /* deve essere sopra le card che hanno z-1 */
+    z-index: 2;
+    /*! do un opacita' */
+    background-color: rgba(0, 0, 0, 0.9);
+
+}
+#popUp{
+    /* width: 500px; */
+    /* possibile in disply fixed */
+    z-index: 3;
+
+    /* transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%; */
+
+
+    outline: 1px solid white;
+    background-color: blueviolet;
+
+    /* width: 90%;
+    max-width: 400px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    padding: 30px;
+    background-color: black;
+    border-radius: 20px;
+    outline: 1px solid white; */
+}
+
+
 /* .rotation-none:hover{
 opacity: 0;
     visibility: hidden;
