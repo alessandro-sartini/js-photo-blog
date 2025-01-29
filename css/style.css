@@ -7,11 +7,9 @@ header{
 
 }
 h1,h2,h3,h4,h5{
-    font-family: 'Edu Tas Beginner', sans-serif ;
+    font-family: 'Edu TAS Beginner', sans-serif ;
 }
-h1{
-    
-}
+
 p{
     font-family:  'Sometype Mono', 'monospace';
 }
@@ -21,3 +19,27 @@ html, body{
     background-image: url('../img/cork.png');
 
 }
+/* add animation rotate */
+.rotate-zoom {
+    transition: transform 0.5s ease-in-out;
+}
+.rotate-zoom:hover{
+
+    transform: rotate(20deg) scale(1.1);
+
+}
+/* remove pin when hover card */
+.rotate-zoom:hover .rotation-none{
+    opacity: 0;
+    visibility: hidden;
+
+    transform: rotate(20deg) scale(1.1);
+
+}
+
+
+/* .rotation-none:hover{
+opacity: 0;
+    visibility: hidden;
+
+} */
