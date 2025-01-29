@@ -5,11 +5,11 @@ axios.get(apiKey)
         console.log(response.data)
         //codice da eseguire in caso di successo
 
-        response.forEach(element => {
+        response.data.forEach(element => {
 
-            const cardHtmal = document.querySelectorAll('.container .row')
-            
-            cardHtmal.innerHtmal +=
+            const  cardContainer = document.querySelector('.container .row')
+
+            cardContainer.innerHTML +=
             
           `  <div class="col-sm-12 col-md-6 col-lg-4">
 
