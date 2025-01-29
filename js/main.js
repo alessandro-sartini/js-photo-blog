@@ -41,8 +41,8 @@ axios
                         <img class="position-absolute top-0 start-50 translate-middle " src="./img/pin.svg" alt="pin">
                     </figure>
 
-                    <a href="#" data-bs-toggle="modalImg" data-bs-target="#modalImg" >
-                        <img id="pressCard" src= "${element.url}" class="card-img-top p-3 img-fluid" alt=${element.title}>
+                    <a href="#" class="" id="pressCard" data-bs-toggle="modalImg"  >
+                        <img  src= "${element.url}" class="card-img-top p-3 img-fluid" alt=${element.title}>
                     </a>
                         
                     <div class="card-body">
@@ -59,32 +59,15 @@ axios
   .catch((error) => {
     // codice da eseguire in caso di errore
     console.error(error);
-  });
+});
 
 
-// const pressCard = document.getElementById('pressCard');
-// const modalImg = document.getElementById('modalImg');
+const pressCard = document.getElementById('pressCard');
+const popUp = document.getElementById('popUp');
 
-// pressCard.addEventListener('click', function () {
-    
-//     modalImg.innerHTML +=
-//     `
-
-
-//         <div class="modal-content">
-//             <div class="modal-header">
-//                     <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-//             </div>
-//             <div class="modal-body">
-//                     ...
-//             </div>
-//             <div class="modal-footer">
-//                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-//                 <button type="button" class="btn btn-primary">Understood</button>
-//             </div>
-//         </div> 
-    
-//     `
+pressCard.addEventListener('click', function (event) {
+    event.preventDefault();
+    popUp.classList.remove('d-none');
 
 
-// })
+})
