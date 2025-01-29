@@ -33,22 +33,8 @@ axios.get(apiKey)
             </div>
             `
             
-
-
-            
         });
 
-
-
-
-
-        // const [{title, date}] = response.data
-        // console.log(title)
-        // console.log(date)
-
-
-
-      
     })
     .catch(error => {
         // codice da eseguire in caso di errore
