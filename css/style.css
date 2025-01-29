@@ -4,6 +4,7 @@
 header{
 
     background-image: url('../img/wall.png');
+    background-size: contain;
 
 }
 h1,h2,h3,h4,h5{
@@ -14,9 +15,10 @@ p{
     font-family:  'Sometype Mono', 'monospace';
 }
 
-html, body{
+body{
 
     background-image: url('../img/cork.png');
+    background-size: contain;
 
 }
 /* add animation rotate */
@@ -24,7 +26,7 @@ html, body{
     transition: transform 0.5s ease-in-out;
 }
 .rotate-zoom:hover{
-
+    z-index: 1;
     transform: rotate(20deg) scale(1.1);
 
 }
