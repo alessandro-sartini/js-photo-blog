@@ -35,15 +35,15 @@ axios
         // si Usa innerHTML per inserire tutta la struttura img
 
         cardContainer.innerHTML += `  
-        <div class="col-sm-12 col-md-6 col-lg-4 ">
+        <div class="col-sm-12 col-md-6 col-lg-4 my-3">
 
-          <div class="card m-3 rotate-zoom position-relative" style="width: 100%;">
+          <div class="card rotate-zoom position-relative" style="width: 100%;">
 
             <figure class=" rotation-none position-absolute top-0 start-50 translate-middle">
               <img class="position-absolute top-0 start-50 translate-middle " src="./img/pin.svg" alt="pin">
             </figure>
 
-            <a href="#" class="" id="${element.id}" data-bs-toggle="modalImg"  >
+            <a href="#" class="rounded" id="${element.id}"  >
               <img  src= "${element.url}" class="card-img-top p-3 img-fluid" alt=${element.title}>
             </a>
                         
@@ -76,26 +76,33 @@ axios
             `
             <img src="${imgSorgente}" class="card-img-top p-3 rounded"alt=${element.title}>
             `;
-              
-            document.querySelector(".opacity-container").classList.remove("d-none"); // Mostra il pop-up
+            // Mostra il pop-up
+            document.querySelector(".opacity-container").classList.remove("d-none"); 
           }
         });
-      // Aggiungo un listener per il pulsante Chiudi
-      document.getElementById("closePopUp").addEventListener("click", function () {
-        document.querySelector(".opacity-container").classList.add("d-none"); // Nascondi il pop-up
-      });
-
-
-
-
+        
+        
     });
-  })
+    
+  })  
   
   .catch((error) => {
     // codice da eseguire in caso di errore
     console.error(error);
-});
-
+  });
+  
+  //! Aggiungo un listener per il pulsante Chiudi
+  document.getElementById("closePopUp").addEventListener("click", function () {
+    
+    // Nascondi il pop-up
+    document.querySelector(".opacity-container").classList.add("d-none"); 
+  });
+  
+  // ! erorre STRANO (mancava il punto....)
+  // ! premendo sul container opaco aggiungo la classe d-none 
+  document.querySelector(".opacity-container").addEventListener("click", function () {
+    document.querySelector(".opacity-container").classList.add("d-none"); // Nascondi il pop-up
+  });
 
 // const pressCard = document.getElementById('pressCard');
 // const popUp = document.getElementById('popUp');
