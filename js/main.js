@@ -49,7 +49,7 @@ axios
                         
             <div class="card-body">
               <p class="card-text">${element.date}</p>
-              <h5 class="card-title fw-bold">${element.title}</h5>
+              <h5 class="card-title fw-bold text-uppercase">${element.title}</h5>
             </div>
 
           </div>
@@ -69,12 +69,14 @@ axios
           
           if (clickedElement) {
             event.preventDefault();
-            const imgSorgente = clickedElement.querySelector("img").src; // Ottieni l'URL dell'immagine cliccata
+
+            //todo  Ottieni l'URL dell'immagine cliccata
+            const imgSorgente = clickedElement.querySelector("img").src; 
               
             // si Usa innerHTML per aggiornare l'immagine nel popup
             document.getElementById("popUpImg").innerHTML =
             `
-            <img src="${imgSorgente}" class="card-img-top p-3 rounded"alt=${element.title}>
+            <img src="${imgSorgente}" class="card-img-top p-3 rounded " width="250px" alt=${element.title}>
             `;
             // Mostra il pop-up
             document.querySelector(".opacity-container").classList.remove("d-none"); 
