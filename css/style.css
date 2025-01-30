@@ -1,71 +1,63 @@
-@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400..700&family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400..700&family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap");
 
-
-header{
-
-    background-image: url('../img/wall.png');
-    background-size: contain;
-
+header {
+  background-image: url("../img/wall.png");
+  background-size: contain;
 }
-h1,h2,h3,h4,h5{
-    font-family: 'Edu TAS Beginner', sans-serif ;
-}
-
-p{
-    font-family:  'Sometype Mono', 'monospace';
+h1,
+h2,
+h3,
+h4,
+h5 {
+  
+    font-family: "Edu TAS Beginner", sans-serif;
 }
 
-body{
+p {
+  font-family: "Sometype Mono", "monospace";
+}
 
-    background-image: url('../img/cork.png');
-    background-size: contain;
-
+body {
+  background-image: url("../img/cork.png");
+  background-size: contain;
 }
 /* add animation rotate */
 .rotate-zoom {
-    transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
-.rotate-zoom:hover{
-    z-index: 1;
-    transform: rotate(20deg) scale(1.1);
-
+.rotate-zoom:hover {
+  z-index: 1;
+  transform: rotate(20deg) scale(1.1);
 }
 /* remove pin when hover card */
-.rotate-zoom:hover .rotation-none{
-    opacity: 0;
-    visibility: hidden;
+.rotate-zoom:hover .rotation-none {
 
-    transform: rotate(20deg) scale(1.1);
+  opacity: 0;
+  visibility: hidden;
 
 }
-
-
 
 /* ! modal  */
-.opacity-container{
-/*todo prendo tutto lo schermo  */
-    width: 100vw;
-    height: 100vh;
-    /* deve essere sopra le card che hanno z-1 */
-    z-index: 2;
-    /*! do un opacita' */
-    background-color: rgba(0, 0, 0, 0.9);
-
+.opacity-container {
+  /*todo prendo tutto lo schermo  */
+  width: 100vw;
+  height: 100vh;
+  /* deve essere sopra le card che hanno z-1 */
+  z-index: 2;
+  /*! do un opacita' */
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
-
-#popUp{
-    /* possibile in disply fixed */
-    z-index: 3;
-    max-width: 20%;
-    outline: 1px solid white;
-    background-color: blueviolet;
-
+#popUp {
+  /* possibile in disply fixed */
+  z-index: 3;
+  max-width: 30%;
+  outline: 1px solid white;
+  background-color: rgb(5, 5, 5);
 }
 
-.round{
-
-    border-radius: 5%;
+.round {
+  border-radius: 5%;
 }
 
 /* .rotation-none:hover{
