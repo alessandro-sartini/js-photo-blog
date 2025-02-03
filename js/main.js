@@ -23,7 +23,7 @@ axios
             </figure>
 
             <a href="#" class="rounded" id="${element.id}"  >
-              <img  src= "${element.url}" class="card-img-top p-3 img-fluid" alt=${element.title} data-id="${element.id}">
+              <img  src= "${element.url}" class="card-img-top p-3 img-fluid" alt=${element.title}">
             </a>
                         
             <div class="card-body">
@@ -40,7 +40,7 @@ axios
         
 
         // Aggiungo un listener per il click sulle card
-        document.querySelector(".container .row").addEventListener("click", function (event) {
+        cardContainer.addEventListener("click", function (event) {
             
           //! Controlla se il click è su un link (<a>)
           const clickedElement = event.target.closest("a");
@@ -69,6 +69,7 @@ axios
   .catch((error) => {
     // codice da eseguire in caso di errore
     console.error(error);
+    
   });
   
   //! Aggiungo un listener per il pulsante Chiudi
